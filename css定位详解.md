@@ -2,7 +2,7 @@
 
 作业：阮一峰
 
-转载自：[阮一峰的网络日志][http://www.ruanyifeng.com/blog/2019/11/css-position.html]
+转载自：[阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/11/css-position.html)
 
 CSS 有两个最重要的基本属性，前端开发必须掌握：`display` 和 `position`。
 
