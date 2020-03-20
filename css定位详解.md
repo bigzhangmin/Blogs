@@ -1,9 +1,5 @@
 # css定位详解
 
-作业：阮一峰
-
-转载自：[阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/11/css-position.html)
-
 CSS 有两个最重要的基本属性，前端开发必须掌握：`display` 和 `position`。
 
 `display`属性指定网页的布局。两个重要的布局：[弹性布局`flex`](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)和[网格布局`grid`](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)。
@@ -175,4 +171,5 @@ CSS 代码也很简单。
 
 需要注意的是，`sticky`必须设在`<th>`元素上面，不能设在`<thead>`和`<tr>`元素，因为这两个元素没有`relative`定位，也就无法产生`sticky`效果。详细解释可以看[这里](https://css-tricks.com/position-sticky-and-table-headers/)。
 
-（正文完）
+
+转载自：[阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/11/css-position.html)
