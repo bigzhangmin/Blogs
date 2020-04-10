@@ -170,11 +170,7 @@ yarn react-native run-android
 
 > 如果你无法正常运行，遇到奇奇怪怪的红屏错误，先回头`仔细对照文档检查`，然后可以看看[讨论区](https://github.com/reactnativecn/react-native-website/issues)。不同时期不同版本可能会碰到不同的问题，我们会在论坛中及时解答更新。但请注意***千万不要\***执行 bundle 命令，那样会导致代码完全无法刷新。
 
-
-
-
-
-
+## 常用命令
 
 ```
 yarn android                           // 启动android
