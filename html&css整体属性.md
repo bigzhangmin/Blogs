@@ -1,4 +1,4 @@
-# html&css整体理属性.md
+# 整理的html&css属性.md
 
 ## HTML
 
@@ -8,9 +8,7 @@
 
 ## CSS
 
-
-
-### 文本超出两行隐藏
+### 文本超出两行添加省略号隐藏
 
 **css的三条属性**
 
@@ -44,5 +42,15 @@ display:-webkit-box;
 -webkit-box-orient:vertical;
 
 -webkit-line-clamp:2; 
+```
+
+### 连续的英文字母和数字换行
+
+> 此属性只能用来处理英文和数字，汉字无效
+
+```css
+word-break: break-all;    //  按字母换行
+word-break: break-word;   //  按单词换行
+word-break: keep-all;     //  按空格，单个单词过长不会换行
 ```
 
