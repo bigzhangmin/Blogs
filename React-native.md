@@ -172,14 +172,14 @@ yarn react-native run-android
 
 ## 常用命令
 
-```
+```shell
 yarn android                           // 启动android
 
 npm start | react-native start         // react-native服务
 
 nox_adb.exe connect 127.0.0.1:62001    // 连接夜神模拟器
 
-如果设备在同一wifi或主机
+// 如果设备在同一wifi或主机
 adb reverse tcp:8081 tcp:8081          // 虚拟机设备链接电脑
 
 ```
