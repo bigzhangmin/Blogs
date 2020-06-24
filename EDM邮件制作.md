@@ -34,68 +34,46 @@ EDM营销（Email Direct Marketing）也叫：Email营销、电子邮件营销�
 
 ### 2. 格式
 
-页面
+1. 邮件的宽度一般在**600px**到**800px**不等，具体宽度由设计师制定，正常不超过**800px**。
 
-* 邮件的宽度一般在**600-800**不等，具体宽度由UI制定，正常不超过**800**
-* 可以使用`HTML`常用标签，不支持`H5`规范
-* 支持`CSS3`之前的样式，`CSS3`部分支持但**不推荐**使用，邮件内只能写行内样式，部分邮件代发工具可写内联样式并支持hover效果
-* 布局严格使用`table`表格格式，否则在邮件中可能会显示会发生异常，也会加大邮件被墙的几率
-* 内侧边或者上下有空白间距，尽量不要用 padding，必须得用标准的` td `来设定空白间距，否则会导致各个邮箱解析不同
-* 关于样式继承，每个邮件平台标准都不一样，所以尽量少用样式继承，尽管这会增加更多代码使`HTML`结构看起来混乱
-* 合并单元格：`colspan="3"` （将3行合并为一行）
-* 正常项目中我们会避免标签嵌套太深，但在邮件中必须使用表格嵌套，所以经除会看到嵌套十多层标签也是正常的。但需要注意避免出错。
+2. `HTML`编码使用**utf-8**。
 
-```html
-    <!-- Outside the container -->
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto; border-spacing:0; border-collapse:collapse;">
-        <tbody>
-            <tr>
-                <td style="padding: 0;">
-                    <!-- Inside the container -->
-                    <table align="center" width="750" border="0" cellspacing="0" cellpadding="0" style="width:750px;max-width: 750px;table-layout:fixed;border-collapse:collapse;background-color: #ffffff;">
-                        <tbody>
-                            <!-- Header area -->
-                            <tr>
-                                <td>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0; border-collapse:collapse;padding-top: 20px;">
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <!-- Content area -->
-                            <tr>
-                                <td>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0; border-collapse:collapse">
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <!-- Footer area -->
-                            <tr>
-                                <td>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0; border-collapse:collapse">
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-```
+3. 布局应严格使用`table`表格布局，否则在邮件中显示可能会发生异常，也会加大邮件被墙的几率。
+
+4. 严格来说邮件不支持使用外链样式以及内联样式，仅能使用行内样式，像这样：
+
+   ```html
+   <td style="font-family: serif;font-size: 16px;color: #ccc;">Text</td>
+   ```
+
+   关于样式继承，不同邮箱平台解析标准不同，部分继承样式可能会失效，所以应当减少使用样式继承，虽然这会增加更多的样式代码。
+
+   目前已有许多邮件发送工具支持使用内联样式，可以在`<style></style>`标签中编写**CSS**，支持**Class**、一般选择器、**hover**效果等，使用内联样式前请务必确认邮件发送工具支持编写内联样式，接受邮箱也支持，否则邮件中的样式会丢失。
+
+   ```html
+   <style>
+   	.normal-text{
+   		font-family: serif;
+   		font-size: 16px;
+   		color: #ccc;
+   	}
+   	.hover-bule:hover{
+   		color: bule;
+   	}
+   </style>
+   
+   <td class="normal-text">
+   	Text
+   	<p class="hover-bule">hover change font color</p>
+   </td>
+   ```
+
+5. 内边距和外边距尽量不适用`padding`和`margin`，正确的做法是使用空标签来设定间距，否者会导致各个邮箱平台解析不同，造成差异。注意：使用`padding`请先去掉`<table>`上的`border-collapse:collapse`样式，或者将值改为`border-collapse: unset`。
+
+6. 表格居中可使用`align="center"`属性，加在`<table>`标签上。合并单元格(td)可使用`colspan="3"`属性。
+
+7. 一般项目中我们会避免深层嵌套，但邮件中使用表格布局免不了深层嵌套，所以有些嵌套十多层标签也不足为奇。但需要注意避免搞混。
+
+
 
 完整模板下载：<a href="#" download="email-template.html">EDM邮件模板</a>
