@@ -52,3 +52,21 @@ word-break: break-word;   //  按单词换行
 word-break: keep-all;     //  按空格，单个单词过长不会换行
 ```
 
+### 禁止鼠标点击
+
+1. 阻止用户的点击动作产生任何效果
+
+2. 阻止缺省鼠标指针的显示
+
+3. 阻止CSS里的hover和active状态的变化触发事件
+
+4. 阻止JavaScript点击动作触发的事件
+
+```css
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+```
+
