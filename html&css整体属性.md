@@ -2,7 +2,13 @@
 
 ## HTML
 
+### 禁止选中区域
 
+```html
+<div onselectstart="return false">
+	此区域禁止复制
+</div>
+```
 
 ## CSS
 
@@ -44,7 +50,7 @@ display:-webkit-box;
 
 ### 连续的英文字母和数字换行
 
-> 此属性只能用来处理英文和数字，汉字无效
+> 此属性只能用来处理英文和数字，汉字无效。
 
 ```css
 word-break: break-all;    //  按字母换行
@@ -67,6 +73,20 @@ word-break: keep-all;     //  按空格，单个单词过长不会换行
     pointer-events: none;
     cursor: default;
     opacity: 0.6;
+}
+```
+
+### 禁止选中区域
+
+> 给body添加此属性整个页面都不可被选择，也可以单独给某个元素添加此属性。
+
+```css
+body{ 
+    -moz-user-select: none; /*火狐*/ 
+    -webkit-user-select: none; /*webkit浏览器*/ 
+    -ms-user-select: none; /*IE10*/ 
+    -khtml-user-select: none; /*早期浏览器*/ 
+    user-select: none; 
 }
 ```
 
