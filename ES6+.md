@@ -17,7 +17,7 @@
 
 上面可以实现浅拷贝，但是代码有点多，es6这个对象扩展，牛掰的一个方法，解决浅拷贝的问题，
 
-```
+```js
 var car={ brand:"BMW",price:"368000",length:"3米" }
 
     //克隆一个跟car完全一样的对象出来：
@@ -41,7 +41,7 @@ var car={ brand:"BMW",price:"368000",length:"3米" }
 
 > Promise是异步编程一种解决方案(回调地狱)
 
-```
+```js
 在没有promise都是这样写的回调，一层一层的写，$.get("/getUser",function(res){
         $.get("/getUserDetail",function(){
             $.get("/getCart",function(){
@@ -55,7 +55,7 @@ var car={ brand:"BMW",price:"368000",length:"3米" }
 
 promise的基本用法
 
-```
+```js
 var promise=new Promise((resolve,reject)=>{
         //b 把需要执行的异步操作放在这里
         $.get("/getUser",res=>{
@@ -75,7 +75,7 @@ var promise=new Promise((resolve,reject)=>{
 
 promise实现多层回调
 
-```
+```js
 new Promise((resolve,reject)=>{
         $.get("/getUser",res=>{
             resolve(res)
@@ -101,7 +101,7 @@ new Promise((resolve,reject)=>{
 
 promise实现错误处理
 
-```
+```js
 new Promise((resolve,reject)=>{
         $.ajax({
             url:"/getUser",
