@@ -90,3 +90,12 @@ body{
 }
 ```
 
+### Table表格内容垂直居中
+
+```css
+td{
+    display: table-cell;
+	vertical-align: middle;
+}
+```
+
