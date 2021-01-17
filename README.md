@@ -1,2 +1,2 @@
 # blgs
-Welcome to zhang damin's blog
+记录的一些学习笔记
